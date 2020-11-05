@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("api/v1/product")
+@RequestMapping("api/v1/products")
 public class ProductController {
 	
 	@Autowired
@@ -19,6 +19,7 @@ public class ProductController {
 
 	@GetMapping("/all")
 	public ResponseEntity<List<Product>> findAllProducts() {
+		System.out.println("Controller findAll() => returrn size = " + productService.findAll().size());
 		return new ResponseEntity<List<Product>>(productService.findAll(), HttpStatus.OK);
 	}
 	@GetMapping("byId/{id}")

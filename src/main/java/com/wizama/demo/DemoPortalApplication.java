@@ -19,8 +19,8 @@ public class DemoPortalApplication {
 			productRepository.save(new Product(null, "Chromacy", 29));
 			productRepository.save(new Product(null, "Crystal Bay", 49));
 			productRepository.save(new Product(null, "Dice Track", 69));
-			productRepository.findAll().forEach(p->{
-				System.out.println(p.getName());
+			productRepository.findAll().forEach(product->{
+				System.out.println(product.getName());
 			});
 		};
 	}
