@@ -25,7 +25,7 @@ jobs:
     - name: Build and Push to Docker Hub
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
-        image: docker-hub-repo/image-name
+        image: snorkybzh/demo-portal-github
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
